@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Interactive Video</title>
+	<!-- Mobile Specific Metas -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+  	 <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+
+  	 <script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+
+  	 <link rel="stylesheet" type="text/css" href="css/videojs.markers.min.css">
+
+  	 <link rel="stylesheet" type="text/css" href="css/customTheme.css">
+
+  	<!-- Custom CSS -->
+  	<link rel="stylesheet" type="text/css" href="css/interaction.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div class="row videoArea">
+			
+			<!-- Video 1 -->
+			<video id="video1" class="vjs-matrix video-js vjs-16-9" data-setup="{}" controls>
+				<source src="media/office_conv.m4v" type="video/mp4">
+				<p class="vjs-no-js">
+				  To view this video please enable JavaScript, and consider upgrading to a web browser that
+				  <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+				</p>
+			</video>
+
+			<!-- Menu -->
+			<div class="menu">
+				<ul class="menuItems">
+					<li onclick="jumpToPoint(10)">Jump to 10 Seconds</li>
+					<li onclick="jumpToPoint(20)">Jump to 30 Seconds</li>
+					<li onclick="jumpToPoint(30)">Jump to 40 Seconds</li>
+				</ul>
+			</div>
+			<!-- Menu Icon -->
+			<img src="media/menu.png" class="menuIcon" onclick="animateMenu()">
+
+		</div>
+
+	</div>
+
+	<div class="container my-2 py-2">
+
+		<button class="btn btn-primary" onclick="updateTime(10)">Update Time</button>
+
+		<button class="btn btn-primary" onclick="muteAudio()">Mute audio</button>
+
+		<button class="btn btn-primary" onclick="togglePlay()">Toggle Play</button>
+
+	</div>
+
+	<!-- Modal 1 -->
+	<div class="modal" id="modal1">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<br>
+					<p id="modalText">Did you know?</p>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Watch Video</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
+	<script src="js/videojs-markers.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/interaction.js"></script>
+
+</body>
+
+</html>

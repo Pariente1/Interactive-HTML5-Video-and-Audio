@@ -1,0 +1,69 @@
+/* Body Background */
+body{
+	margin-top: 20px;
+	background-color: #d5d9de;
+}
+
+/* Text Style */
+p{
+	color: #656565;
+}
+
+/* Bootstrap Container */
+.container{
+	background-color: white;
+	box-shadow: 0 0 5px #9d9d9d;
+}
+
+/* Responsive Video */
+video{
+	width: 100%;
+	height: 100%;
+}
+
+/* Menu */
+.videoArea{
+	position: relative;
+	overflow: hidden;
+}
+
+.menuIcon{
+	position: absolute;
+	cursor: pointer;
+	right: 10px;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+}
+
+.menu{
+	position: absolute;
+	right: -405px;
+	background-color: rgba(47,47,47,.95);
+	box-shadow: -1px 0 8px rgba(0,0,0,0.6);
+	width: 400px;
+	height: 100%;
+	padding: 70px 0;
+}
+
+.menuItems{
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.menuItems li{
+	list-style: none;
+	padding: 10px 15px;
+	background-color: rgba(255,255,255,0.3);
+	border-bottom: 1px solid #a7a7a7;
+	cursor: pointer;
+}
+
+.menuItems li:first-child{
+	border-top: 1px solid #a7a7a7;
+}
+
+.menuItems li:hover{
+	background-color: rgba(255,255,255,0.4);
+}

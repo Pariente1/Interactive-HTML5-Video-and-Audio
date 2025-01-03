@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Interactive Video</title>
+	<!-- Mobile Specific Metas -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+  	<!-- Custom CSS -->
+  	<link rel="stylesheet" type="text/css" href="css/interaction.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		
+		<div class="row">
+			<video id="video1" controls>
+				<source src="media/office_conv.m4v" type="video/mp4">
+				Your browser does not support this type of video.
+			</video>
+		</div>
+
+	</div>
+
+	<div class="container controlArea">
+		<div class="row">
+			<button class="btn btn-primary" onclick="showModal()">Show Modal</button>
+		</div>
+	</div>
+
+	<div class="modal" id="modal1">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <!-- Modal body -->
+	      <div class="modal-body">
+	        Modal body..
+	      </div>
+
+	      <!-- Modal footer -->
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+	      </div>
+
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/interaction.js"></script>
+
+</body>
+
+</html>

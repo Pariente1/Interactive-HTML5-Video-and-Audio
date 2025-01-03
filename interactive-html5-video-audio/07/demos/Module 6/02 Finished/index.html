@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Interactive Audio</title>
+	<!-- Mobile Specific Metas -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+  	<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+  	<!-- Custom CSS -->
+  	<link rel="stylesheet" type="text/css" href="css/interaction.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="menuArea">
+			<img src="media/close.png" class="close" onclick="animateMenu()">
+			<ul>
+				<li onclick="menuSelected(0)">Song 1</li>
+				<li onclick="menuSelected(1)">Song 2</li>
+			</ul>
+		</div>
+
+		<div class="infoSection">
+			<img src="media/close.png" class="close" onclick="animateInfoSection()">
+			<div class="textArea">
+				<h4>About this Song</h4>
+				<p><span id="section1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span> <span id="section2">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</span> <span id="section3">when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span></p>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			</div>
+		</div>
+
+		<div class="row topBar">
+			<img src="media/menu.png" class="menu ml-2" onclick="animateMenu()">
+		</div>
+
+		<div class="row albumCover">
+			<div class="col-xs-12">
+				<img src="media/album.png" class="rounded mx-auto d-block" id="coverImg">
+			</div>
+		</div>
+
+		<div class="playBarWrapper w-100 px-4 pt-2">
+			<div class="row">
+				<div class="playBar mx-5 mt-4">
+					<div class="bar">
+						<div class="unplayed-progress"></div>
+					</div>
+					<div class="playHead"></div>
+				</div>
+			</div>
+			<div class="row justify-content-between mx-4 mt-2">
+				<div class="col-xs-4">
+					<span class="time" id="start">0:00</span>
+				</div>
+				<div class="col-xs-4">
+					<span class="time" id="end">2:35</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="row titleArea justify-content-center mt-3">
+			<div class="col-xs-12">
+				<h3 id="bandName">Band Name</h3>
+				<p id="songName" onclick="animateInfoSection()">Song Name</p>
+			</div>
+		</div>
+
+		<div class="row controlArea justify-content-around px-5">
+			<div class="col-xs-4">
+				<img src="media/back.png" class="control disabled" id="backBtn" onclick="backAudio()">
+			</div>
+			<div class="col-xs-4">
+				<img src="media/play.png" class="control" id="playBtn" onclick="playAudio()">
+			</div>
+			<div class="col-xs-4">
+				<img src="media/next.png" class="control" id="nextBtn" onclick="nextAudio()">
+			</div>
+		</div>
+
+		<div class="row secondaryControl justify-content-around px-5">
+			<div class="col-xs-6" onclick="changeSpeed()">
+				<div class="speedId">1.0X</div>
+				<div class="speedLabel">Speed</div>
+			</div>
+			<div class="col-xs-6" onclick="toggleLoop()">
+				<div class="speedId" id="offLabel">OFF</div>
+				<div class="speedLabel">Auto Play</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<audio id="audioFile">
+				<source src="media/audio.mp3" type="audio/mpeg">
+				Your browser does not support this type of audio. 
+			</audio>
+		</div>
+
+	</div>
+
+	<!-- Bootstrap -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/interaction.js"></script>
+
+</body>
+
+</html>

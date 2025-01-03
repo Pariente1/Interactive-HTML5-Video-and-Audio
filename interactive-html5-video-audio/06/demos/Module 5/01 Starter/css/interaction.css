@@ -1,0 +1,17 @@
+/* Body Background */
+body{
+	margin-top: 20px;
+	background-color: #d5d9de;
+}
+
+/* Text Style */
+p{
+	color: #656565;
+}
+
+/* Bootstrap Container */
+.container{
+	position: relative;
+	background-color: white;
+	box-shadow: 0 0 5px #9d9d9d;
+}

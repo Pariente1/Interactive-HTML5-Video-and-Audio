@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Interactive Video</title>
+	<!-- Mobile Specific Metas -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+  	<!-- Bootstrap CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+  	<!-- Custom CSS -->
+  	<link rel="stylesheet" type="text/css" href="css/interaction.css">
+
+</head>
+
+
+<body onload="pageLoaded()">
+
+	<div class="container">
+
+		<div class="row videoArea">
+
+			<video id="video1" controls autoplay muted>
+				<source src="media/office_conv.mp4" type="video/mp4">
+			</video>
+
+			<div class="menu">
+				<ul class="menuItems">
+<!-- 					<li id="videoLink" data-jumpto="10" onclick="jumpToPoint(this)">menu item 1</li> -->
+					<li onclick="jumpToPoint(this)">menu item 1</li>
+					<li onclick="jumpToPoint(this)">menu item 2</li>
+					<li onclick="jumpToPoint(this)">menu item 3</li>
+				</ul>
+				<h5>Change video</h5>
+				<ul class="menuItems">
+					<li onclick="loadVideo('media/newVideo.mp4')">Change video 1</li>
+					<li onclick="loadVideo('media/office_conv.m4v')">Change video 2</li>
+				</ul>
+			</div>
+
+			<img src="media/menu.png"  class="menuIcon" onclick="animateMenu()">
+		</div>
+
+		<div class="hotspot" id="hotspot1" onclick="showHotspot()"></div>
+	</div>
+
+	<div class="container controlArea">
+		<div class="row">
+
+<!-- 			<button class="btn btn-primary" onclick="toggleVideo()">Toggle Video</button>
+			<button class="btn btn-primary" onclick="showModal()">Show Modal</button> -->
+			<!-- <img src="media/play.png" alt="boton_play" id="play_pause" onclick="toggleVideo()"> -->
+<!-- 			<div id="playBtn" onclick="muteAudio()"></div>
+
+ -->		
+			<div class="col-12 py-2">
+				<p id="first">this is de first</p>
+				<p id="second">this is de second</p>
+				<p id="third">this is de third</p>
+			</div>
+ 		</div>
+	</div>
+	<!-- The Modal -->
+	<div class="modal" id="myModal1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				
+				<!-- Modal body -->
+				<div class="modal-body">
+					<p id="modalText">Did you know that?</p>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Continue Video</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+<!-- jQuery (versión compatible con Bootstrap 4.6.2) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Popper.js (versión para Bootstrap 4) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+
+	<!-- Custom JS -->
+	<script src="js/interaction.js"></script>
+
+</body>
+
+</html>
