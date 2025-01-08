@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<html>
-
 <head>
 	<meta charset="utf-8">
 	<title>Interactive Video</title>
@@ -11,8 +9,14 @@
 
   	<!-- Bootstrap CSS -->
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	
+	<link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet" />
+	
+	<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 
-  	<!-- Custom CSS -->
+	<link rel="stylesheet" type='text/css' href="./css/videojs.markers.min.css">
+
+	<!-- Custom CSS -->
   	<link rel="stylesheet" type="text/css" href="css/interaction.css">
 
 </head>
@@ -24,11 +28,18 @@
 		<div class="row videoArea">
 			
 			<!-- Video 1 -->
-			<video id="video1" controls>
+			<video id="video1" class="video-js vjs-16-9" data-setup="{}" controls>
 				<source src="media/office_conv.m4v" type="video/mp4">
-				Your browser does not support the video tag.
+				<p class="vjs-no-js">
+					To view this video please enable JavaScript, and consider upgrading to a
+					web browser that
+					<a href="https://videojs.com/html5-video-support/" target="_blank"
+					  >supports HTML5 video</a
+					>
+				  </p>
 			</video>
 
+			<img src="media/menu.png" class="menuIcon" onclick="animateMenu()">
 			<!-- Menu -->
 			<div class="menu">
 				<ul class="menuItems">
@@ -38,8 +49,8 @@
 				</ul>
 			</div>
 
-			<!-- Menu Icon -->
-			<img src="media/menu.png" class="menuIcon" onclick="animateMenu()">
+		
+			
 
 		</div>
 
@@ -48,7 +59,9 @@
 	<!-- Controls area -->
 	<div class="container">
 
-
+		<button class="btn btn-primary" onclick="updateTime(10)">update time</button>
+		<button class="btn btn-primary"  onclick="muteAudio()">Mute audio</button>
+		<button class="btn btn-primary"  onclick="togglePlay()">togglePlay</button>
 
 	</div>
 
@@ -74,8 +87,12 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 
 	<!-- Custom JS -->
-	<script src="js/interaction.js"></script>
+	<script src="https://vjs.zencdn.net/7.4.1/video.min.js"></script>
 
+	<script src="./js/videojs-markers.min.js"></script>
+
+	<script src="js/interaction.js"></script>
+	
 </body>
 
 </html>
