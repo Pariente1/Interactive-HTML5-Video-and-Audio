@@ -19,8 +19,39 @@
 
 	<div class="container">
 		
+		<div class="row topBar">
+			<img src="media/menu.png" class="menu ml-2">
+		</div>
+
+		<div class="row albumCover">
+			<div class="col-xs-12">
+				<img src="media/album.png" class="rounded mx-auto d-block" id="coverImg">
+			</div>
+		</div>
+
+		<div class="row titleArea justify-content-center mt-3">
+			<div class="col-xs-12">
+				<h3 class="bandName">band name</h3>
+				<p class="songName">song title</p>
+			</div>
+		</div>
+
+		<div class="row controlArea justify-content-around px-5">
+			
+			<div class="col-xs-4">
+				<img src="media/back.png" class="control disabled" alt="backbutton" id="backBtn">
+			</div>
+			<div class="col-xs-4">
+				<img src="media/play.png" class="control" alt="playbtn" id="playBtin">
+			</div>
+			<div class="col-xs-4">
+				<img src="media/next.png"  class="control" alt="nextbtn" id="nextBtn">
+			</div>
+
+		</div>
+
 		<div class="row">
-			<audio id="audioFile" controls="">
+			<audio id="audioFile">
 				<source src="media/Audio_1.mp3" type="audio/mpeg">
 				Your browser does not support this type of audio. 
 			</audio>

@@ -14,4 +14,49 @@ p{
 	position: relative;
 	background-color: white;
 	box-shadow: 0 0 5px #9d9d9d;
+	max-width: 450px;
+	overflow: hidden;
+}
+
+/* menu */
+
+.menu{
+	height: 35px;
+	width: 35px;
+	padding: 5px;
+	cursor: pointer;
+}
+
+#coverImg {
+	width: 70%;
+	height: auto;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+.titleArea{
+	text-align: center;
+}
+
+.titleArea h3{
+	font-weight: bold;
+}
+
+.titleArea p{
+	color: #246ed3;
+}
+
+.controlArea{
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+.control{
+	width: 30px;
+	height: auto;
+	cursor: pointer;
+}
+
+.disabled{
+	opacity: .2;
+	cursor: auto;
 }
