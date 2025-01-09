@@ -60,3 +60,43 @@ p{
 	opacity: .2;
 	cursor: auto;
 }
+
+.playBar{
+	width: 100%;
+	position: relative;
+}
+.bar {
+	background-color: #246ed3;
+	border-radius: 25px;
+	height: 3px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.playHead{
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -1px;
+	transform: translate(-50%,-50%);
+}
+
+.unplayed-progress{
+	background-color: rgba(240, 240, 240, 0.9);
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	top: 0;
+}
+
+.time {
+	color: #999b9c;
+	font-size: 12px;
+}
