@@ -30,7 +30,12 @@ function loadAlbum(e){
 //back
 
 function backAudio(){
-   
+   playAudio();
+
+   currentAlbum = currentAlbum - 1;
+   loadAlbum(currentAlbum);
+   audioFile.src = albumList.albums[currentAlbum].song;
+   playAudio();
 }
 
 // Play
@@ -51,7 +56,7 @@ function nextAudio(){
     playAudio();
     currentAlbum = currentAlbum + 1;
     if (currentAlbum >= albumList.albums.length) {
-        alert('there no more audiofiles')
+        alert('Last audio file');
     } else {
         loadAlbum(currentAlbum);
         audioFile.src = albumList.albums[currentAlbum].song;
