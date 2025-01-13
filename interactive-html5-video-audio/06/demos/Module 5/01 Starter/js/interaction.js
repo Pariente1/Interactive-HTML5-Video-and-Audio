@@ -4,6 +4,7 @@ var audioFile = document.getElementById('audioFile');
 var coverImg = document.getElementById('coverImg');
 var bandNAme = document.getElementById('bandName');
 var songNAme = document.getElementById('songName');
+var playBtn = document.getElementById('playBtn');
 
 var currentAlbum = 0;
 
@@ -37,8 +38,10 @@ function backAudio(){
 function playAudio(){
     if (audioFile.paused){
         audioFile.play();
+        playBtn.src= ('media/pause.png')
     } else {
         audioFile.pause();
+        playBtn.src= ('media/play.png')
     }
 }
 
