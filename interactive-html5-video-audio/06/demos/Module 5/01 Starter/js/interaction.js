@@ -48,7 +48,15 @@ function playAudio(){
 // Next
 
 function nextAudio(){
- 
+    playAudio();
+    currentAlbum = currentAlbum + 1;
+    if (currentAlbum >= albumList.albums.length) {
+        alert('there no more audiofiles')
+    } else {
+        loadAlbum(currentAlbum);
+        audioFile.src = albumList.albums[currentAlbum].song;
+        playAudio();
+    }
 }
 
 // Ended
