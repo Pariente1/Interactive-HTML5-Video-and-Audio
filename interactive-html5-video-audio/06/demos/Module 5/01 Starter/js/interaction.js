@@ -42,13 +42,17 @@ function backAudio(){
 }
 
 function disableNextBack(){
-    if (currentAlbum == albumsList.albums.length - 1) {
+
+    // Limitar el rango de currentAlbum
+    currentAlbum = Math.max(0, Math.min(currentAlbum, albumsList.albums.length - 1));
+
+    if (currentAlbum === albumsList.albums.length - 1) {
         nextBtn.classList.add('disabled');
     } else {
         nextBtn.classList.remove('disabled');
     }
 
-    if (currentAlbum == 0) {
+    if (currentAlbum === 0) {
         backBtn.classList.add('disabled');
     } else {
         backBtn.classList.remove('disabled');
@@ -70,6 +74,10 @@ function playAudio(){
 // Next
 
 function nextAudio(){
+
+     // Limitar el rango de currentAlbum
+     currentAlbum = Math.max(0, Math.min(currentAlbum, albumsList.albums.length - 1));
+     
     playAudio();
 
     disableNextBack();
