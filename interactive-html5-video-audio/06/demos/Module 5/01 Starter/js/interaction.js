@@ -5,8 +5,12 @@ var coverImg = document.getElementById('coverImg');
 var bandNAme = document.getElementById('bandName');
 var songNAme = document.getElementById('songName');
 var playBtn = document.getElementById('playBtn');
+var endTime = document.getElementById('end');
+var startTime = document.getElementById('start');
 
 var currentAlbum = 0;
+var duration;
+var currentTime;
 
 //json
 var albumsList = {
@@ -18,13 +22,28 @@ var albumsList = {
 
 //load
 loadAlbum(currentAlbum);
-
-
+duration = audioFile.duration;
+endTime.innerHTML = formatTime(duration);
 
 function loadAlbum(e){
     coverImg.src = albumsList.albums[e].albumCover;
     bandNAme.innerHTML = albumsList.albums[e].bandName;
     songNAme.innerHTML = albumsList.albums[e].songName;
+}
+
+// format time
+
+function formatTime(e){
+    var minutes = parseInt(e / 60, 10);
+    var seconds = parseInt(e % 60);
+
+    if (seconds < 9) {
+        seconds = "0" + seconds;
+    }
+
+    var finalTime = minutes + ":" + seconds 
+
+    return finalTime;
 }
 
 //back
@@ -91,7 +110,12 @@ function nextAudio(){
     }
 }
 
+// update
 
+audioFile.ontimeupdate = function(){
+    currentTime = formatTime(audioFile.currentTime);
+    startTime.innerHTML= currentTime;
+}
 
 // Ended
 
