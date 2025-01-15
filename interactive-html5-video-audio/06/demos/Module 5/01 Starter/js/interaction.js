@@ -8,9 +8,15 @@ var playBtn = document.getElementById('playBtn');
 var endTime = document.getElementById('end');
 var startTime = document.getElementById('start');
 
-var currentAlbum = 0;
+var playBar = document.querySelector('.bar');
+var playBarRemaining = document.querySelector('.unplayed-progress');
+var playHead = document.querySelector('.playHead')
+
+
 var duration;
 var currentTime;
+
+var currentAlbum = 0;
 
 //json
 var albumsList = {
@@ -115,6 +121,16 @@ function nextAudio(){
 audioFile.ontimeupdate = function(){
     currentTime = formatTime(audioFile.currentTime);
     startTime.innerHTML= currentTime;
+
+    var percent = audioFile.currentTime / audioFile.duration * 100;
+
+    updatePlayBarCSS(percent);
+}
+
+function updatePlayBarCSS(percent){
+    playHead.style.left = percent + '%';
+    playBarRemaining.style.left = percent + '%';
+
 }
 
 // Ended
