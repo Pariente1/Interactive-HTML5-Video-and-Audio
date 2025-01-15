@@ -10,13 +10,16 @@ var startTime = document.getElementById('start');
 
 var playBar = document.querySelector('.bar');
 var playBarRemaining = document.querySelector('.unplayed-progress');
-var playHead = document.querySelector('.playHead')
+var playHead = document.querySelector('.playHead');
+var speedId = document.querySelector('.speedId');
 
 
 var duration;
 var currentTime;
 
 var currentAlbum = 0;
+
+var playBackSpeed = 1;
 
 //json
 var albumsList = {
@@ -114,6 +117,22 @@ function nextAudio(){
         audioFile.src = albumsList.albums[currentAlbum].song;
         playAudio();
     }
+}
+
+// Change Speed
+
+function changeSpeed(){
+    if(playBackSpeed == 1){
+        audioFile.playbackRate = 2;
+        playBackSpeed = 2;
+        speedId.innerHTML = '2.0X';
+    } else {
+        audioFile.playbackRate = 1;
+        playBackSpeed = 1;
+        speedId.innerHTML = '1.0X';
+
+    }
+    
 }
 
 // update
